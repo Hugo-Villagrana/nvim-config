@@ -1,3 +1,3 @@
-# Example_config
+# Hugo's NVChad Lua Custom Configs
 
-This can be used as an example custom config for NvChad. Do check the https://github.com/NvChad/nvcommunity
+Add this config to the `lua/custom/` folder in NVChad and you are good to go!
