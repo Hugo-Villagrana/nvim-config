@@ -4,14 +4,28 @@ M.treesitter = {
   ensure_installed = {
     "vim",
     "lua",
+
+    -- front-end
     "html",
     "css",
     "javascript",
     "typescript",
     "tsx",
+
+    -- C
     "c",
+
+    -- misc
     "markdown",
     "markdown_inline",
+
+    -- go
+    "go",
+    "gomod",
+    "gosum",
+
+    -- terraform
+    "terraform",
   },
   indent = {
     enable = true,
@@ -42,6 +56,10 @@ M.mason = {
     "gopls",
     "golines",
     "golangci-lint",
+
+    -- terraform stuff
+    "terraformls",
+    "tflint",
   },
 }
 
