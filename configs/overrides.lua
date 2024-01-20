@@ -60,6 +60,9 @@ M.mason = {
     -- terraform stuff
     "terraformls",
     "tflint",
+
+    -- markdown stuff
+    "marksman",
   },
 }
 
