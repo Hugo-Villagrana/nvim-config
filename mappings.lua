@@ -13,15 +13,8 @@ M.general = {
       "Formatting",
     },
 
-    ["<leader>e"] = {
-      function()
-        vim.diagnostic.open_float(0, { scope = "line" })
-      end,
-      "see lsp error",
-    },
-
     -- Assign to auto-save plugin
-    ["<leader>as"] = {
+    ["<leader>n"] = {
       function()
         vim.api.nvim_set_keymap("n", "<leader>n", ":ASToggle<CR>", {})
       end,
