@@ -10,9 +10,25 @@ M.general = {
       function()
         require("conform").format()
       end,
-      "formatting",
+      "Formatting",
+    },
+
+    ["<leader>e"] = {
+      function()
+        vim.diagnostic.open_float(0, { scope = "line" })
+      end,
+      "see lsp error",
+    },
+
+    -- Assign to auto-save plugin
+    ["<leader>as"] = {
+      function()
+        vim.api.nvim_set_keymap("n", "<leader>n", ":ASToggle<CR>", {})
+      end,
+      "toggle auto-save",
     },
   },
+
   v = {
     [">"] = { ">gv", "indent" },
   },

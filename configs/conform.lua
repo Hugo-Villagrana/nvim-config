@@ -6,7 +6,7 @@ local options = {
 
     go = { "goimports", "gofmt" },
 
-    tf = { "terraform" },
+    terraform = { "terraform_fmt" },
 
     javascript = { "prettier" },
     css = { "prettier" },
@@ -14,7 +14,7 @@ local options = {
 
     sh = { "shfmt" },
 
-    markdown = { "marksman" },
+    markdown = { "markdownlint-cli2" },
   },
 
   -- adding same formatter for multiple filetypes can look too much work for some

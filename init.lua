@@ -8,6 +8,8 @@ autocmd("VimResized", {
   command = "tabdo wincmd =",
 })
 
+-- Open nvim at the location in the cmd line
+-- e.g. nvim example/dir
 local group_cdpwd = vim.api.nvim_create_augroup("group_cdpwd", { clear = true })
 autocmd("VimEnter", {
   group = group_cdpwd,
