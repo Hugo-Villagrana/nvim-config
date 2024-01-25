@@ -14,11 +14,11 @@ M.general = {
     },
 
     -- Assign to auto-save plugin
-    ["<leader>n"] = {
+    ["<leader>gg"] = {
       function()
-        vim.api.nvim_set_keymap("n", "<leader>n", ":ASToggle<CR>", {})
+        vim.api.nvim_set_keymap("n", "<leader>gg", ":LazyGit<CR>", {})
       end,
-      "toggle auto-save",
+      "Open LazyGit",
     },
   },
 

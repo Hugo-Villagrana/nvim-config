@@ -2,6 +2,10 @@ local autocmd = vim.api.nvim_create_autocmd
 vim.wo.number = true
 vim.wo.relativenumber = true
 
+-- Enable treesitter folding
+vim.wo.foldmethod = "expr"
+vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+
 -- Auto resize panes when resizing nvim window
 autocmd("VimResized", {
   pattern = "*",
@@ -16,5 +20,16 @@ autocmd("VimEnter", {
   pattern = "*",
   callback = function()
     vim.api.nvim_set_current_dir(vim.fn.expand "%:p:h")
+  end,
+})
+
+-- Fix Folding in nvim
+autocmd("BufEnter", {
+  callback = function()
+    if vim.opt.foldmethod:get() == "expr" then
+      vim.schedule(function()
+        vim.opt.foldmethod = "expr"
+      end)
+    end
   end,
 })

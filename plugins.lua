@@ -57,18 +57,13 @@ local plugins = {
   },
 
   {
-    "Pocco81/auto-save.nvim",
+    "kdheepak/lazygit.nvim",
     lazy = false,
-    config = function()
-      require("auto-save").setup {
-        enabled = true,
-      }
-    end,
+    -- optional for floating window border decoration
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
   },
-
-  -- ates
-
-  -- auto-save
 
   -- To make a plugin not be loaded
   -- {
