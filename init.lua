@@ -5,6 +5,7 @@ vim.wo.relativenumber = true
 -- Enable treesitter folding
 vim.wo.foldmethod = "expr"
 vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+vim.opt.foldenable = false
 
 -- Auto resize panes when resizing nvim window
 autocmd("VimResized", {
