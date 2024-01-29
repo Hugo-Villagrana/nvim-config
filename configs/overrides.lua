@@ -26,6 +26,9 @@ M.treesitter = {
 
     -- terraform
     "terraform",
+
+    -- nix
+    "nix",
   },
   indent = {
     enable = true,
@@ -63,6 +66,9 @@ M.mason = {
 
     -- markdown stuff
     "marksman",
+
+    -- nix stuff
+    "nil",
   },
 }
 
