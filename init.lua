@@ -34,3 +34,12 @@ autocmd("BufEnter", {
     end
   end,
 })
+
+-- Set background to transparent
+vim.cmd [[
+  autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
+  autocmd vimenter * hi NonText guibg=NONE ctermbg=NONE
+  autocmd vimenter * hi LineNr guibg=NONE ctermbg=NONE
+  autocmd vimenter * hi Folded guibg=NONE ctermbg=NONE
+  autocmd vimenter * hi EndOfBuffer guibg=NONE ctermbg=NONE
+]]

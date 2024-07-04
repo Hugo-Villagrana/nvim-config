@@ -14,7 +14,7 @@ local options = {
 
     sh = { "shfmt" },
 
-    markdown = { "markdownlint" },
+    -- markdown = { "markdownlint" },
   },
 
   -- adding same formatter for multiple filetypes can look too much work for some
