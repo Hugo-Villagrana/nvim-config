@@ -29,6 +29,9 @@ M.treesitter = {
 
     -- nix
     "nix",
+
+    -- rust
+    "rust",
   },
   indent = {
     enable = true,
@@ -69,6 +72,10 @@ M.mason = {
 
     -- nix stuff
     "nil",
+
+    -- rust
+    "rust_analyzer",
+    "rustfmt",
   },
 }
 
