@@ -1,98 +1,109 @@
 local M = {}
 
 M.treesitter = {
-  ensure_installed = {
-    "vim",
-    "lua",
+	ensure_installed = {
+		"vim",
+		"lua",
 
-    -- front-end
-    "html",
-    "css",
-    "javascript",
-    "typescript",
-    "tsx",
+		-- front-end
+		"html",
+		"css",
+		"javascript",
+		"typescript",
+		"tsx",
 
-    -- C
-    "c",
+		-- C
+		"c",
 
-    -- misc
-    "markdown",
-    "markdown_inline",
+		-- misc
+		"markdown",
+		"markdown_inline",
 
-    -- go
-    "go",
-    "gomod",
-    "gosum",
+		-- go
+		"go",
+		"gomod",
+		"gosum",
 
-    -- terraform
-    "terraform",
+		-- terraform
+		"terraform",
 
-    -- nix
-    "nix",
+		-- nix
+		"nix",
 
-    -- rust
-    "rust",
-  },
-  indent = {
-    enable = true,
-    -- disable = {
-    --   "python"
-    -- },
-  },
+		-- rust
+		"rust",
+
+		-- svelte
+		"svelte",
+	},
+	indent = {
+		enable = true,
+		-- disable = {
+		--   "python"
+		-- },
+	},
 }
 
 M.mason = {
-  ensure_installed = {
-    -- lua stuff
-    "lua-language-server",
-    "stylua",
+	ensure_installed = {
+		-- lua stuff
+		"lua-language-server",
+		"stylua",
 
-    -- web dev stuff
-    "css-lsp",
-    "html-lsp",
-    "typescript-language-server",
-    "deno",
-    "prettier",
+		-- web dev stuff
+		"css-lsp",
+		"html-lsp",
+		"typescript-language-server",
+		"deno",
+		"prettier",
+		"prettierd",
+		"eslint_d",
 
-    -- c/cpp stuff
-    "clangd",
-    "clang-format",
+		-- c/cpp stuff
+		"clangd",
+		"clang-format",
 
-    -- go stuff
-    "gopls",
-    "golines",
-    "golangci-lint",
+		-- go stuff
+		"gopls",
+		"golines",
+		"golangci-lint",
 
-    -- terraform stuff
-    "terraformls",
-    "tflint",
+		-- terraform stuff
+		"terraform-ls",
+		"tflint",
 
-    -- markdown stuff
-    "marksman",
+		-- markdown stuff
+		"marksman",
 
-    -- nix stuff
-    "nil",
+		-- rust
+		"rust-analyzer",
 
-    -- rust
-    "rust_analyzer",
-    "rustfmt",
-  },
+		-- svelte
+		"svelte-language-server",
+	},
 }
 
 -- git support in nvimtree
 M.nvimtree = {
-  git = {
-    enable = true,
-  },
+	git = {
+		enable = true,
+	},
 
-  renderer = {
-    highlight_git = true,
-    icons = {
-      show = {
-        git = true,
-      },
-    },
-  },
+	renderer = {
+		highlight_git = true,
+		icons = {
+			show = {
+				git = true,
+			},
+		},
+	},
+
+	view = {
+		side = "right",
+		number = true,
+		relativenumber = true,
+		width = 40,
+	},
 }
 
 return M
