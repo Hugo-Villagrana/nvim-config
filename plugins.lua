@@ -87,7 +87,10 @@ local plugins = {
 			vim.g.matchup_matchparen_offscreen = { method = "popup" }
 		end,
 	},
-
+	{
+		"chaoren/vim-wordmotion",
+		lazy = false,
+	},
 	-- To make a plugin not be loaded
 	-- {
 	--   "NvChad/nvim-colorizer.lua",
