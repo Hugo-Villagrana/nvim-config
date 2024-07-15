@@ -5,6 +5,7 @@ local options = {
 		lua = { "stylua" },
 
 		go = { "goimports", "gofmt" },
+		proto = { "buf", "protolint" },
 
 		terraform = { "terraform_fmt" },
 
@@ -17,11 +18,9 @@ local options = {
 		html = { "prettier" },
 		json = { "prettier" },
 		yaml = { "prettier" },
-		markdown = { "prettier" },
+		markdown = { "prettier", "markdownlint" },
 
 		sh = { "shfmt" },
-
-		-- markdown = { "markdownlint" },
 	},
 
 	-- adding same formatter for multiple filetypes can look too much work for some

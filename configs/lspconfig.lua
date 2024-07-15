@@ -8,7 +8,6 @@ local servers = {
 	"html",
 	"cssls",
 	"tsserver",
-	"clangd",
 	"gopls",
 	"terraformls",
 	"tflint",
@@ -16,6 +15,7 @@ local servers = {
 	"rust_analyzer",
 	"svelte",
 	"tailwindcss",
+	"bufls",
 }
 
 for _, lsp in ipairs(servers) do
@@ -24,6 +24,18 @@ for _, lsp in ipairs(servers) do
 		capabilities = capabilities,
 	})
 end
+
+lspconfig.clangd.setup({
+	on_attach = on_attach,
+	capabilities = capabilities,
+	filetypes = {
+		"c",
+		"cpp",
+		"objc",
+		"objcpp",
+		"cuda",
+	},
+})
 
 --
 -- lspconfig.pyright.setup { blabla}

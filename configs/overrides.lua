@@ -50,6 +50,11 @@ M.mason = {
 		"lua-language-server",
 		"stylua",
 
+		-- protobuf stuff
+		"buf-language-server",
+		"buf",
+		"protolint",
+
 		-- web dev stuff
 		"css-lsp",
 		"html-lsp",
@@ -75,6 +80,7 @@ M.mason = {
 
 		-- markdown stuff
 		"marksman",
+		"markdownlint",
 
 		-- rust
 		"rust-analyzer",
