@@ -73,6 +73,14 @@ M.mason = {
 		"gopls",
 		"golines",
 		"golangci-lint",
+		"goimports",
+		"goimports-reviser",
+		"gofumpt",
+		"golangci-lint-langserver",
+		"gospel",
+		"gotests",
+		"gotestsum",
+		"gomodifytags",
 
 		-- terraform stuff
 		"terraform-ls",
