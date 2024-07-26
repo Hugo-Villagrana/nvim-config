@@ -77,7 +77,6 @@ M.mason = {
 		"goimports-reviser",
 		"gofumpt",
 		"golangci-lint-langserver",
-		"gospel",
 		"gotests",
 		"gotestsum",
 		"gomodifytags",
@@ -95,6 +94,9 @@ M.mason = {
 
 		-- svelte
 		"svelte-language-server",
+
+		-- nix stuff
+		"rnix-lsp",
 	},
 }
 
