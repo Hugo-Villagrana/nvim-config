@@ -96,7 +96,7 @@ M.mason = {
 		"svelte-language-server",
 
 		-- nix stuff
-		"nil",
+		"rnix-lsp",
 	},
 }
 
