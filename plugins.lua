@@ -91,6 +91,16 @@ local plugins = {
 		"chaoren/vim-wordmotion",
 		lazy = false,
 	},
+
+	-- autoclose tags in html
+	{
+		lazy = false,
+		"windwp/nvim-ts-autotag",
+		config = function()
+			require("nvim-ts-autotag").setup()
+		end,
+	},
+
 	-- To make a plugin not be loaded
 	-- {
 	--   "NvChad/nvim-colorizer.lua",

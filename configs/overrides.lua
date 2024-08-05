@@ -33,6 +33,12 @@ M.treesitter = {
 		-- rust
 		"rust",
 
+		-- proto
+		"proto",
+
+		--yaml
+		"yaml",
+
 		-- svelte
 		"svelte",
 	},
@@ -63,7 +69,9 @@ M.mason = {
 		"prettier",
 		"prettierd",
 		"eslint_d",
+		"eslint-lsp",
 		"tailwindcss-language-server",
+		"json-lsp",
 
 		-- c/cpp stuff
 		"clangd",
@@ -96,7 +104,10 @@ M.mason = {
 		"svelte-language-server",
 
 		-- nix stuff
-		"rnix-lsp",
+		"nil",
+
+		-- shell stuff
+		"shfmt",
 	},
 }
 

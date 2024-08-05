@@ -1,4 +1,6 @@
 local autocmd = vim.api.nvim_create_autocmd
+local group_autofmt = vim.api.nvim_create_augroup("AutoFormat", {})
+
 vim.wo.number = true
 vim.wo.relativenumber = true
 
@@ -35,13 +37,20 @@ autocmd("BufEnter", {
 	end,
 })
 
--- Set background to transparent
--- vim.cmd([[
---   autocmd vimenter * hi Normal guibg=NONE ctermbg=NONE
---   autocmd vimenter * hi NonText guibg=NONE ctermbg=NONE
---   autocmd vimenter * hi LineNr guibg=NONE ctermbg=NONE
---   autocmd vimenter * hi Folded guibg=NONE ctermbg=NONE
---   autocmd vimenter * hi EndOfBuffer guibg=NONE ctermbg=NONE
--- ]])
+local function organize_imports()
+	local params = {
+		command = "_typescript.organizeImports",
+		arguments = { vim.api.nvim_buf_get_name(0) },
+		title = "",
+	}
+	vim.lsp.buf.execute_command(params)
+end
+
+autocmd("BufWritePost", {
+	group = group_autofmt,
+
+	pattern = { "*.js", "*.jsx", "*.ts", "*.tsx" },
+	callback = organize_imports,
+})
 
 vim.cmd("runtime macros/matchit.vim")

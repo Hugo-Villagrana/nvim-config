@@ -21,6 +21,8 @@ local options = {
 		markdown = { "prettier", "markdownlint" },
 
 		sh = { "shfmt" },
+
+		nix = { "nixpkgs_fmt" },
 	},
 
 	-- adding same formatter for multiple filetypes can look too much work for some
