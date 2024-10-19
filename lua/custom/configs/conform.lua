@@ -1,30 +1,39 @@
 local options = {
-  lsp_fallback = true,
+	lsp_fallback = true,
 
-  formatters_by_ft = {
-    lua = { "stylua" },
+	formatters_by_ft = {
+		lua = { "stylua" },
 
-    go = { "goimports", "gofmt" },
+		go = { "goimports", "gofmt" },
+		proto = { "buf", "protolint" },
 
-    terraform = { "terraform_fmt" },
+		terraform = { "terraform_fmt" },
 
-    javascript = { "prettier" },
-    css = { "prettier" },
-    html = { "prettier" },
+		javascript = { "prettier" },
+		typescript = { "prettier" },
+		javascriptreact = { "prettier" },
+		typescriptreact = { "prettier" },
+		svelte = { "prettier" },
+		css = { "prettier" },
+		html = { "prettier" },
+		json = { "prettier" },
+		yaml = { "prettier" },
+		markdown = { "prettier", "markdownlint" },
 
-    sh = { "shfmt" },
+		sh = { "shfmt" },
 
-    -- markdown = { "markdownlint" },
-  },
+		nix = { "nixpkgs_fmt" },
+		python = { "black", "flake8", "isort" },
+	},
 
-  -- adding same formatter for multiple filetypes can look too much work for some
-  -- instead of the above code you could just use a loop! the config is just a table after all!
+	-- adding same formatter for multiple filetypes can look too much work for some
+	-- instead of the above code you could just use a loop! the config is just a table after all!
 
-  format_on_save = {
-    -- These options will be passed to conform.format()
-    timeout_ms = 500,
-    lsp_fallback = true,
-  },
+	format_on_save = {
+		-- These options will be passed to conform.format()
+		timeout_ms = 500,
+		lsp_fallback = true,
+	},
 }
 
 require("conform").setup(options)

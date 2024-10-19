@@ -1,98 +1,145 @@
 local M = {}
 
 M.treesitter = {
-  ensure_installed = {
-    "vim",
-    "lua",
+	ensure_installed = {
+		"vim",
+		"lua",
 
-    -- front-end
-    "html",
-    "css",
-    "javascript",
-    "typescript",
-    "tsx",
+		-- front-end
+		"html",
+		"css",
+		"javascript",
+		"typescript",
+		"tsx",
 
-    -- C
-    "c",
+		-- C
+		"c",
 
-    -- misc
-    "markdown",
-    "markdown_inline",
+		-- misc
+		"markdown",
+		"markdown_inline",
 
-    -- go
-    "go",
-    "gomod",
-    "gosum",
+		-- go
+		"go",
+		"gomod",
+		"gosum",
 
-    -- terraform
-    "terraform",
+		-- terraform
+		"terraform",
 
-    -- nix
-    "nix",
+		-- nix
+		"nix",
 
-    -- rust
-    "rust",
-  },
-  indent = {
-    enable = true,
-    -- disable = {
-    --   "python"
-    -- },
-  },
+		-- rust
+		"rust",
+
+		-- proto
+		"proto",
+
+		--yaml
+		"yaml",
+
+		-- svelte
+		"svelte",
+
+		"python",
+	},
+	indent = {
+		enable = true,
+		-- disable = {
+		--   "python"
+		-- },
+	},
 }
 
 M.mason = {
-  ensure_installed = {
-    -- lua stuff
-    "lua-language-server",
-    "stylua",
+	ensure_installed = {
+		-- lua stuff
+		"lua-language-server",
+		"stylua",
 
-    -- web dev stuff
-    "css-lsp",
-    "html-lsp",
-    "typescript-language-server",
-    "deno",
-    "prettier",
+		-- protobuf stuff
+		"buf-language-server",
+		"buf",
+		"protolint",
 
-    -- c/cpp stuff
-    "clangd",
-    "clang-format",
+		-- web dev stuff
+		"css-lsp",
+		"html-lsp",
+		"typescript-language-server",
+		"deno",
+		"prettier",
+		"prettierd",
+		"eslint_d",
+		"eslint-lsp",
+		"tailwindcss-language-server",
+		"json-lsp",
 
-    -- go stuff
-    "gopls",
-    "golines",
-    "golangci-lint",
+		-- c/cpp stuff
+		"clangd",
+		"clang-format",
 
-    -- terraform stuff
-    "terraformls",
-    "tflint",
+		-- go stuff
+		"gopls",
+		"golines",
+		"golangci-lint",
+		"goimports",
+		"goimports-reviser",
+		"gofumpt",
+		"golangci-lint-langserver",
+		"gotests",
+		"gotestsum",
+		"gomodifytags",
 
-    -- markdown stuff
-    "marksman",
+		-- terraform stuff
+		"terraform-ls",
+		"tflint",
 
-    -- nix stuff
-    "nil",
+		-- markdown stuff
+		"marksman",
+		"markdownlint",
 
-    -- rust
-    "rust_analyzer",
-    "rustfmt",
-  },
+		-- rust
+		"rust-analyzer",
+
+		-- svelte
+		"svelte-language-server",
+
+		-- nix stuff
+		"nil",
+
+		-- shell stuff
+		"shfmt",
+
+		-- python
+		"black",
+		"pyright",
+		"python-lsp-server",
+		"debugpy",
+	},
 }
 
 -- git support in nvimtree
 M.nvimtree = {
-  git = {
-    enable = true,
-  },
+	git = {
+		enable = true,
+	},
 
-  renderer = {
-    highlight_git = true,
-    icons = {
-      show = {
-        git = true,
-      },
-    },
-  },
+	renderer = {
+		highlight_git = true,
+		icons = {
+			show = {
+				git = true,
+			},
+		},
+	},
+
+	view = {
+		side = "right",
+		number = true,
+		relativenumber = true,
+		width = 40,
+	},
 }
 
 return M
